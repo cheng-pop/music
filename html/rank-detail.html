@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/song-list.css">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- 导航栏 -->
+        <div class="header shadow">
+            <div class="container flex-row">
+                <ul class="nav flex-row" id="title">
+                    <li><a href="foundMusic.html"  id="nav1">首页</a></li>
+                    <li><a href="singer.html" id="nav2" >歌手</a></li>
+                    <li><a href="songs.html" id="nav3">歌单</a></li>
+                    <li><a href="rankingList.html" id="nav4">排行榜</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="layout">
+            <div class="fluid">
+                <div class="songs-wrap container">
+                  
+                    <!-- 横条下方内容 -->
+                    <div class="load-more" id="box1">
+                        <!-- 标题 -->
+                        <div class="top" >
+                            <div class="avatar">
+                                <img src="http://p1.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=200y200" alt=""> 
+                            </div>
+                            <div class="info">
+                                <div class="title flex-between">
+                                    <span >音乐飙升榜！</span>
+                                </div>
+                                <div  class="user flex-row">
+                                    <div class="avatar">
+                                        <img  src="http://p1.music.126.net/KxePid7qTvt6V2iYVy-rYQ==/109951165050882728.jpg?param=100y100" alt="">
+                                    </div>
+                                    <p class="nickname">网易云音乐</p>
+                                    <p class="createTime">   2014-06-30创建   </p>
+                                </div>
+            
+                                <div class="desc">
+                                    <p class="ellipsis-two">音乐中每天热度上升最快的单曲，每日更新。</p>
+                                </div>
+                            </div>   
+                       </div>
+                    <!-- 文本 -->
+                    <div class="content">
+                        <table  class="artist-table">
+                            <thead >
+                                <tr >
+                                    <th  class="th-index">序号</th>
+                                    <th  class="th-name">歌曲</th>
+                                    <th  class="th-artist">歌手</th>
+                                    <th  class="th-album">专辑</th>
+                                    <th  class="th-duration">播放</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">01</span>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/JDgEAtBoXnFVkJZQ7mSlZw==/109951165372794272.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="斯芬克斯星座" class="name ellipsis">斯芬克斯星座</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title="段镇宇" class="author ellipsis"> 段镇宇</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p title="斯芬克斯星座" class="ellipsis">斯芬克斯星座</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=1485220909.mp3" controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">02</span>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/oHKk0epk5tdlo-4j7Sf3Sw==/109951165101500479.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="那年夏天，那个海边" class="name ellipsis">那年夏天，那个海边</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title=" 胡瑞特 " class="author ellipsis">  胡瑞特  </p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p title="  那年夏天，那个海边" class="ellipsis">  那年夏天，那个海边</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=1459346303.mp3 " controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">03</span>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/iCcG7sDXV7zEB5AAUyYV8Q==/109951164975755407.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="我们的纪念" class="name ellipsis">我们的纪念</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title=" 简弘亦 " class="author ellipsis">  简弘亦  </p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p  title="虹" class="ellipsis"> 虹 </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=1447330704.mp3" controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">04</span>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/UwB8YHn4BWODYj_CuGt37w==/109951163520357845.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="断点" class="name ellipsis">断点</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title=" 张敬轩 " class="author ellipsis"> 张敬轩 </p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p  title="My Way" class="ellipsis"> My Way </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=189323.mp3 " controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">05</span>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/Y91B_GXc5d9t-0X0Uu_7xw==/109951163063096750.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="黄昏" class="name ellipsis">黄昏</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title="    周传雄    " class="author ellipsis">    周传雄   </p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p  title="忘记 transfer" class="ellipsis"> 忘记 transfer </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=190072.mp3" controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td >
+                                        <div  class="index-container flex-center">
+                                            <span  class="num">06</span>   
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div class="name-container">
+                                            <div  class="avatar">
+                                                <div class="el-image">
+                                                    <img src="https://p2.music.126.net/8FaINzPb3xj1S9tyG16Ang==/6650945837921965.jpg?param=100y100" class="el-image__inner">
+                                                </div>
+                                            </div>
+                                            <p  title="樱吹雪" class="name ellipsis">樱吹雪</p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="artist-container">
+                                            <p  title=" 周传雄" class="author ellipsis">   周传雄 </p>
+                                        </div>
+                                    </td>
+                                    <td >
+                                        <div  class="album-container">
+                                            <p  title="樱吹雪" class="ellipsis"> 樱吹雪</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=29572046.mp3 " controls ></audio>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                    </div> 
+                 </div>
+            </div>
+        </div>
+     </div>
+     
+     <!-- 底部 -->
+     <div  class="footer">
+        <div  class="container">
+            <p class="left">
+                Mymusic
+            </p>
+            <p >
+                <span class="mr5">Mymusic © 2019-2020</span>
+                <a href="#" id="mymusic">mymusic 演示站</a>
+                <span >. Designed by cheng</span>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/song-list.js"></script>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+.rank-wrap {
+    margin-top: -20px;
+}
+
+.rank-wrap .module .title::before {
+    content: "";
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    background: rgb(250, 40, 0);
+}
+.rank-wrap .module .title {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -15px;
+}
+.list .item {
+    max-width: 10.5%;
+    cursor: pointer;
+    flex: 0 0 10.5%;
+    padding: 0px 50px 30px;
+}
+.list .item .cover {
+    position: relative;
+    z-index: 2;
+    padding-top: 100%;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    margin-bottom: 10px;
+}
+.list .item .cover .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.list .item  .cover .count {
+    position: absolute;
+    right: 18px;
+    top: 1px;
+    height: 24px;
+    padding-left: 9px;
+    background: url(https://img.alicdn.com/tfs/TB1xEGRub9YBuNjy0FgXXcxcXXa-268-48.png) no-repeat 0;
+    background-size: cover;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list .item  .cover .count .arrow {
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin-right: 5px;
+    border-style: solid;
+    border-width: 4px 0px 4px 6px;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+.list .item  .cover .count:after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    top: 0;
+    width: 14px;
+    height: 24px;
+    background: url(https://img.alicdn.com/tfs/TB1xEGRub9YBuNjy0FgXXcxcXXa-268-48.png) no-repeat 100%;
+    background-size: cover;
+}
+.list .item .info .name{
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+.ellipsis-two {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 18px;
+}

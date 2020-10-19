@@ -1,0 +1,100 @@
+
+.singer-wrap {
+    margin-top: -20px;
+    overflow: hidden;
+    
+}
+.singer-wrap .tag-lang {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.singer-wrap .tag-lang li {
+    width: 56px;
+    height: 28px;
+    line-height: 29px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.singer-wrap .tag-lang li.active {
+    background: #fa2800;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+.singer-wrap .singer-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin: 30px -15px 0;  
+}
+.singer-wrap .singer-list li {
+    padding: 0 60px 30px;
+    flex: 0 0 10%;
+    max-width: 10%;
+    display: list-item;
+    /* text-align: -webkit-match-parent;   */
+}
+
+.load-more ul{
+    display: none;
+    overflow: hidden;
+}
+
+.singer-wrap .singer-list li .cover {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    
+}
+
+.singer-wrap .singer-list li .cover .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+ 
+}
+.el-image {
+    /* position: relative; */
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.el-image .el-image-inner{
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+.singer-wrap .singer-list li .info {
+    margin-top: 15px;
+    text-align: center;
+}
+.singer-wrap .singer-list li .info .name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    word-break: break-word;
+}
+.singer-wrap .singer-list li .info .count {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #fa2800;
+}
+
+
+
+
+
+
