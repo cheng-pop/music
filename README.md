@@ -1,6 +1,6 @@
 # music
 这是一个音乐网站<br/>
-首页
+首页<br/>
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/shouye.png)
 歌手栏<br/>
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/singer.png)
