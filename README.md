@@ -1,4 +1,5 @@
 # music
-这是一个音乐网站
+这是一个音乐网站<br/>
+首页
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/shouye.png)
 
