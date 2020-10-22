@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/singer.css">
-    <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.js"></script>
+    <script src="../js/common.js"></script>
 </head>
 <body>
     <div id="app">
@@ -27,1437 +28,85 @@
                 <div class="singer-wrap container">
                     <!-- 歌手分类导航栏 -->
                     <div class="filter">
-                        <ul  class="tag-lang" id="box">
-                            <li class="active"> 全部 </li>
-                            <li  class=""> 华语 </li>
-                            <li  class=""> 欧美 </li>
-                            <li  class=""> 日本 </li>
-                            <li  class=""> 韩国 </li>
-                            <li  class=""> 其他 </li>
+                        <ul  class="tag-lang tag-type" id="box">
+                            <li  class="active"> 全部 </li>
+                            <li  class=""> 男歌手 </li>
+                            <li  class=""> 女歌手 </li>
+                            <li  class=""> 乐队 </li>
                         </ul>
                     </div>
                     <div class="load-more"  id="box1">
                         <!-- 1 -->
                         <ul class="singer-list" >
-                            <li >
+                            <li v-for="(user,index) in userlist":key="index">
                                 <div  class="cover">
                                     <div  class="image">
                                         <div  class="el-image">
-                                            <img src="http://p3.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=200y200"  class="el-image-inner">
+                                            <img :src="user.avatar"  class="el-image-inner">
                                             <!---->
                                         </div>
                                     </div>
                                 </div>
                                 <div  class="info">
-                                    <p  class="name">毛不易</p>
-                                    <p  class="count">单曲数121</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/kFvcOGKwtNQcskXloPFu4A==/109951163305732134.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">傲七爷</p>
-                                    <p  class="count">单曲数109</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/nfgZTD8SBvIlnLuGEYWYDg==/109951165182866347.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">林俊杰</p>
-                                    <p  class="count">单曲数605</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/ltoFA2DfaCPOsAiXnDns2Q==/109951164681625927.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">是你的垚</p>
-                                    <p  class="count">单曲数35</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/eiazGAbIGMBF-Q9lInm5xw==/109951164158509628.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">华晨宇</p>
-                                    <p  class="count">单曲数218</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ATZ8-mOxophKXrLC0iXMZw==/109951163536269820.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">许嵩</p>
-                                    <p  class="count">单曲数238</p>
-                                </div>
-                            </li>
-                            
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/VXY5VYnsUVPExV6ZoQ81zw==/109951163460549658.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">司南</p>
-                                    <p  class="count">单曲数120</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/vq6ND24GpdIWorqiWqz2jg==/109951165048009270.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">周深</p>
-                                    <p  class="count">单曲数320</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/PFVNR3tU9DCiIY71NdUDcQ==/109951165334518246.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">张杰</p>
-                                    <p  class="count">单曲数623</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/QY_pUbVroy4wW60HMqyS8w==/109951165187976643.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">田馥甄</p>
-                                    <p  class="count">单曲数287</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/G371lHL9OI7apD-fvDm1-g==/109951165052216875.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">OneRepublic</p>
-                                    <p  class="count">单曲数613</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/z0ZF1plmItOhl_-CaVVSUQ==/18787355185507331.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">SLANDER</p>
-                                    <p  class="count">单曲数264</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/_egjY8qgSCwn5s4ZgGu9KA==/109951163427531646.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">h3R3</p>
-                                    <p  class="count">单曲数131</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ytdZwERCVFd8U1VaWL6wXA==/109951165325450537.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Justin Bieber</p>
-                                    <p  class="count">单曲数1207</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/MseTGtzDA9r230WAMWwNGA==/1401877333278177.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Various Artists</p>
-                                    <p  class="count">单曲数401113</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/2pFBU0R4ZVEWhL-SM9x5ZA==/109951165207744764.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">MADILYN</p>
-                                    <p  class="count">单曲数287</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/t_6pf4mKoZw7woPsJKjVRw==/109951165206519001.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Felix Bennett</p>
-                                    <p  class="count">单曲数2</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/PLBIEFXxnK3zguFTP7k_fA==/109951165163656638.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Taylor Swift</p>
-                                    <p  class="count">单曲数1283</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/jqndCggNS8bOQQeF325smg==/109951164531586437.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">XXXTENTACION</p>
-                                    <p  class="count">单曲数605</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/USNxT05rh4HN9E1M288pjQ==/109951165005288417.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Sasha Sloan</p>
-                                    <p  class="count">单曲数21</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/FNuJqxdJQHCzEpRXw7V35A==/109951164727863667.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">まふまふ</p>
-                                    <p  class="count">单曲数342</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/9JqJLrsK4S-gF_c8DcideQ==/109951164785044354.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">澤野弘之</p>
-                                    <p  class="count">单曲数2093</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/7WJxq8yetuBHS6AzgBovxg==/109951164271441708.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">DAOKO</p>
-                                    <p  class="count">单曲数194</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/8QqlAn1YA8h_xZ6Tlx5dgQ==/109951163805685684.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">V.A.</p>
-                                    <p  class="count">单曲数186058</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/5OkGI2KDf_hF9b-j4SKb8w==/6639950720410416.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">鎖那</p>
-                                    <p  class="count">单曲数116</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/fbCNosSD3--ikl4eF9xuOQ==/109951164706053448.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">久石譲</p>
-                                    <p  class="count">单曲数3451</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/PyVjJIELBa6Nl5OYEIpaVw==/109951163749358629.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">花澤香菜</p>
-                                    <p  class="count">单曲数738</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/V8RvAdlbr6eiN73A_n_Png==/109951165253190886.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">YOASOBI</p>
-                                    <p  class="count">单曲数5</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/Nl5iXv1hWBhKGIEkjyXylg==/109951164854300319.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">TK from 凛として時雨</p>
-                                    <p  class="count">单曲数103</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/zyDcnvLfS22JNqtqYkcWwQ==/3439272376857848.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">高梨康治</p>
-                                    <p  class="count">单曲数3526</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/5IzIb9LkYOuUPesiUF5ZAw==/109951164575359151.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">白智英</p>
-                                    <p  class="count">单曲数355</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/2Qfu1gVJh3t065EEkKRsbg==/109951165098531835.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">宣美</p>
-                                    <p  class="count">单曲数37</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/lQoUyyLpIILnBZ_r2kNdqg==/2528876746101225.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">尹美莱</p>
-                                    <p  class="count">单曲数134</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/vZvGldhZV4GFxbAe9Fsb1w==/109951165003258953.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">BLOO</p>
-                                    <p  class="count">单曲数35</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/GcAbMZ_N1r8Gl0m503FVAw==/109951164716272223.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">BTS (防弹少年团)</p>
-                                    <p  class="count">单曲数544</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/BDoNgu5OAMnK-nf5U-xq8w==/109951165102436567.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Zico</p>
-                                    <p  class="count">单曲数204</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/YhH1_ZJWrYuzu83YS97Wuw==/109951164716364364.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">SUGA</p>
-                                    <p  class="count">单曲数12</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/iR9XNhrvfYrPtIZ-qDqIyw==/3302932930643465.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">权正烈</p>
-                                    <p  class="count">单曲数17</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/mdj9VXFzVU4OQT3-1jqC9g==/109951164260262506.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">레게 강 같은 평화 (RGP)</p>
-                                    <p  class="count">单曲数41</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/XoWKUQ8rKe-QB-gZjQ4yFw==/18787355185507330.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Rain</p>
-                                    <p  class="count">单曲数372</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/UGXDxueJZpCjhJb7_1L6Rw==/109951164740401531.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">PonySoore</p>
-                                    <p  class="count">单曲数47</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/_ZokoDY3UF462-Hkh9PQLg==/109951164801057808.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Ghulamjan Yakup</p>
-                                    <p  class="count">单曲数18</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ogKCNVwfII5YdzsF9jjWwA==/109951165216606689.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">LAN7</p>
-                                    <p  class="count">单曲数11</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/CFtloeqlSxtdHXbKEICo7A==/6023124697636333.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Sainkho Namtchylak</p>
-                                    <p  class="count">单曲数361</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/WPs09YnIAjTK-cdbIHL9XQ==/109951165120682333.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">GEZR</p>
-                                    <p  class="count">单曲数156</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/OkJE6Yn_XCNaRNto6r6c-Q==/109951163212150405.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Hoaprox</p>
-                                    <p  class="count">单曲数76</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/hg0W7ac5IKeYHnC5xqQ6CA==/109951164955006821.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Tamas Wells</p>
-                                    <p  class="count">单曲数111</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/dEz_YeAye8vfzk_68B7agQ==/109951164841325000.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Askar Muhtar</p>
-                                    <p  class="count">单曲数116</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/pgFSiaLga4zGhB2Ywrctww==/109951163550379693.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">四季音色</p>
-                                    <p  class="count">单曲数46</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/bc1PX3NCXI7SQIVMTXLyKA==/109951163293073071.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Miradiljan-Bawudun</p>
-                                    <p  class="count">单曲数72</p>
+                                    <p  class="name">{{user.name}}</p>
+                                    <p  class="count">{{user.count}}</p>
                                 </div>
                             </li>
                         </ul>
                         <!-- 2 -->
                         <ul>
-                            <li >
+                            <li v-for="(user,index) in userlist1":key="index">
                                 <div  class="cover">
                                     <div  class="image">
                                         <div  class="el-image">
-                                            <img src="http://p3.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=200y200"  class="el-image-inner">
+                                            <img :src="user.avatar"  class="el-image-inner">
                                             <!---->
                                         </div>
                                     </div>
                                 </div>
                                 <div  class="info">
-                                    <p  class="name">毛不易</p>
-                                    <p  class="count">单曲数121</p>
+                                    <p  class="name">{{user.name}}</p>
+                                    <p  class="count">{{user.count}}</p>
                                 </div>
                             </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/kFvcOGKwtNQcskXloPFu4A==/109951163305732134.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">傲七爷</p>
-                                    <p  class="count">单曲数109</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/nfgZTD8SBvIlnLuGEYWYDg==/109951165182866347.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">林俊杰</p>
-                                    <p  class="count">单曲数605</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/ltoFA2DfaCPOsAiXnDns2Q==/109951164681625927.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">是你的垚</p>
-                                    <p  class="count">单曲数35</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/eiazGAbIGMBF-Q9lInm5xw==/109951164158509628.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">华晨宇</p>
-                                    <p  class="count">单曲数218</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ATZ8-mOxophKXrLC0iXMZw==/109951163536269820.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">许嵩</p>
-                                    <p  class="count">单曲数238</p>
-                                </div>
-                            </li>
-                            
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/VXY5VYnsUVPExV6ZoQ81zw==/109951163460549658.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">司南</p>
-                                    <p  class="count">单曲数120</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/vq6ND24GpdIWorqiWqz2jg==/109951165048009270.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">周深</p>
-                                    <p  class="count">单曲数320</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/PFVNR3tU9DCiIY71NdUDcQ==/109951165334518246.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">张杰</p>
-                                    <p  class="count">单曲数623</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/QY_pUbVroy4wW60HMqyS8w==/109951165187976643.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">田馥甄</p>
-                                    <p  class="count">单曲数287</p>
-                                </div>
-                            </li>
+
                         </ul>
                         <!-- 3 -->
                         <ul>
-                            <li >
+                            <li v-for="(user,index) in userlist2":key="index">
                                 <div  class="cover">
                                     <div  class="image">
                                         <div  class="el-image">
-                                            <img src="http://p3.music.126.net/G371lHL9OI7apD-fvDm1-g==/109951165052216875.jpg?param=200y200" class="el-image-inner">
+                                            <img :src="user.avatar"  class="el-image-inner">
                                             <!---->
                                         </div>
                                     </div>
                                 </div>
                                 <div  class="info">
-                                    <p  class="name">OneRepublic</p>
-                                    <p  class="count">单曲数613</p>
+                                    <p  class="name">{{user.name}}</p>
+                                    <p  class="count">{{user.count}}</p>
                                 </div>
                             </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/z0ZF1plmItOhl_-CaVVSUQ==/18787355185507331.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">SLANDER</p>
-                                    <p  class="count">单曲数264</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/_egjY8qgSCwn5s4ZgGu9KA==/109951163427531646.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">h3R3</p>
-                                    <p  class="count">单曲数131</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ytdZwERCVFd8U1VaWL6wXA==/109951165325450537.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Justin Bieber</p>
-                                    <p  class="count">单曲数1207</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/MseTGtzDA9r230WAMWwNGA==/1401877333278177.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Various Artists</p>
-                                    <p  class="count">单曲数401113</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/2pFBU0R4ZVEWhL-SM9x5ZA==/109951165207744764.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">MADILYN</p>
-                                    <p  class="count">单曲数287</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/t_6pf4mKoZw7woPsJKjVRw==/109951165206519001.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Felix Bennett</p>
-                                    <p  class="count">单曲数2</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/PLBIEFXxnK3zguFTP7k_fA==/109951165163656638.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Taylor Swift</p>
-                                    <p  class="count">单曲数1283</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/jqndCggNS8bOQQeF325smg==/109951164531586437.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">XXXTENTACION</p>
-                                    <p  class="count">单曲数605</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/USNxT05rh4HN9E1M288pjQ==/109951165005288417.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Sasha Sloan</p>
-                                    <p  class="count">单曲数21</p>
-                                </div>
-                            </li>    
                         </ul>
                         <!-- 4 -->
                         <ul>
-                            <li >
+                            <li v-for="(user,index) in userlist3":key="index">
                                 <div  class="cover">
                                     <div  class="image">
                                         <div  class="el-image">
-                                            <img src="http://p4.music.126.net/FNuJqxdJQHCzEpRXw7V35A==/109951164727863667.jpg?param=200y200" class="el-image-inner">
+                                            <img :src="user.avatar"  class="el-image-inner">
                                             <!---->
                                         </div>
                                     </div>
                                 </div>
                                 <div  class="info">
-                                    <p  class="name">まふまふ</p>
-                                    <p  class="count">单曲数342</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/9JqJLrsK4S-gF_c8DcideQ==/109951164785044354.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">澤野弘之</p>
-                                    <p  class="count">单曲数2093</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/7WJxq8yetuBHS6AzgBovxg==/109951164271441708.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">DAOKO</p>
-                                    <p  class="count">单曲数194</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/8QqlAn1YA8h_xZ6Tlx5dgQ==/109951163805685684.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">V.A.</p>
-                                    <p  class="count">单曲数186058</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/5OkGI2KDf_hF9b-j4SKb8w==/6639950720410416.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">鎖那</p>
-                                    <p  class="count">单曲数116</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/fbCNosSD3--ikl4eF9xuOQ==/109951164706053448.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">久石譲</p>
-                                    <p  class="count">单曲数3451</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/PyVjJIELBa6Nl5OYEIpaVw==/109951163749358629.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">花澤香菜</p>
-                                    <p  class="count">单曲数738</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/V8RvAdlbr6eiN73A_n_Png==/109951165253190886.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">YOASOBI</p>
-                                    <p  class="count">单曲数5</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/Nl5iXv1hWBhKGIEkjyXylg==/109951164854300319.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">TK from 凛として時雨</p>
-                                    <p  class="count">单曲数103</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/zyDcnvLfS22JNqtqYkcWwQ==/3439272376857848.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">高梨康治</p>
-                                    <p  class="count">单曲数3526</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- 5 -->
-                        <ul>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/5IzIb9LkYOuUPesiUF5ZAw==/109951164575359151.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">白智英</p>
-                                    <p  class="count">单曲数355</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/2Qfu1gVJh3t065EEkKRsbg==/109951165098531835.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">宣美</p>
-                                    <p  class="count">单曲数37</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/lQoUyyLpIILnBZ_r2kNdqg==/2528876746101225.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">尹美莱</p>
-                                    <p  class="count">单曲数134</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/vZvGldhZV4GFxbAe9Fsb1w==/109951165003258953.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">BLOO</p>
-                                    <p  class="count">单曲数35</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/GcAbMZ_N1r8Gl0m503FVAw==/109951164716272223.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">BTS (防弹少年团)</p>
-                                    <p  class="count">单曲数544</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/BDoNgu5OAMnK-nf5U-xq8w==/109951165102436567.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Zico</p>
-                                    <p  class="count">单曲数204</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/YhH1_ZJWrYuzu83YS97Wuw==/109951164716364364.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">SUGA</p>
-                                    <p  class="count">单曲数12</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/iR9XNhrvfYrPtIZ-qDqIyw==/3302932930643465.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">权正烈</p>
-                                    <p  class="count">单曲数17</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/mdj9VXFzVU4OQT3-1jqC9g==/109951164260262506.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">레게 강 같은 평화 (RGP)</p>
-                                    <p  class="count">单曲数41</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/XoWKUQ8rKe-QB-gZjQ4yFw==/18787355185507330.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Rain</p>
-                                    <p  class="count">单曲数372</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- 6-->
-                        <ul>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/UGXDxueJZpCjhJb7_1L6Rw==/109951164740401531.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">PonySoore</p>
-                                    <p  class="count">单曲数47</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/_ZokoDY3UF462-Hkh9PQLg==/109951164801057808.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Ghulamjan Yakup</p>
-                                    <p  class="count">单曲数18</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/ogKCNVwfII5YdzsF9jjWwA==/109951165216606689.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">LAN7</p>
-                                    <p  class="count">单曲数11</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/CFtloeqlSxtdHXbKEICo7A==/6023124697636333.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Sainkho Namtchylak</p>
-                                    <p  class="count">单曲数361</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/WPs09YnIAjTK-cdbIHL9XQ==/109951165120682333.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">GEZR</p>
-                                    <p  class="count">单曲数156</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/OkJE6Yn_XCNaRNto6r6c-Q==/109951163212150405.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Hoaprox</p>
-                                    <p  class="count">单曲数76</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p4.music.126.net/hg0W7ac5IKeYHnC5xqQ6CA==/109951164955006821.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Tamas Wells</p>
-                                    <p  class="count">单曲数111</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/dEz_YeAye8vfzk_68B7agQ==/109951164841325000.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Askar Muhtar</p>
-                                    <p  class="count">单曲数116</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/pgFSiaLga4zGhB2Ywrctww==/109951163550379693.jpg?param=200y200" class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">四季音色</p>
-                                    <p  class="count">单曲数46</p>
-                                </div>
-                            </li>
-                            <li >
-                                <div  class="cover">
-                                    <div  class="image">
-                                        <div  class="el-image">
-                                            <img src="http://p3.music.126.net/bc1PX3NCXI7SQIVMTXLyKA==/109951163293073071.jpg?param=200y200"  class="el-image-inner">
-                                            <!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  class="info">
-                                    <p  class="name">Miradiljan-Bawudun</p>
-                                    <p  class="count">单曲数72</p>
+                                    <p  class="name">{{user.name}}</p>
+                                    <p  class="count">{{user.count}}</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -1476,10 +125,342 @@
         </div>
     </div>
  
-<script src="../js/common.js"></script>
 
 <script>
-     
+    let vm=new Vue({
+        el:'#app',
+        data() {
+            return {
+                user:{
+                    avatar: 'http://p3.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=200y200',
+                    name:'毛不易',
+                    count:'单曲数121',
+                },
+                userlist: [
+                    {
+                        avatar: 'http://p3.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=200y200',
+                        name:'毛不易',
+                        count:'单曲数121',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/nfgZTD8SBvIlnLuGEYWYDg==/109951165182866347.jpg?param=200y200',
+                        name:'林俊杰',
+                        count:'单曲数605',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/ltoFA2DfaCPOsAiXnDns2Q==/109951164681625927.jpg?param=200y200',
+                        name:'是你的垚',
+                        count:'单曲数35',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/eiazGAbIGMBF-Q9lInm5xw==/109951164158509628.jpg?param=200y200',
+                        name:'华晨宇',
+                        count:'单曲数218',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/ATZ8-mOxophKXrLC0iXMZw==/109951163536269820.jpg?param=200y200',
+                        name:'许嵩',
+                        count:'单曲数238',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/e1V73y8t0G-mJMLJ8FK6dw==/109951163511969173.jpg?param=200y200',
+                        name:'汪苏泷',
+                        count:'单曲数417',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/vq6ND24GpdIWorqiWqz2jg==/109951165048009270.jpg?param=200y200',
+                        name:'周深',
+                        count:'单曲数320',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/PFVNR3tU9DCiIY71NdUDcQ==/109951165334518246.jpg?param=200y200',
+                        name:'张杰',
+                        count:'单曲数623',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/_egjY8qgSCwn5s4ZgGu9KA==/109951163427531646.jpg?param=200y200',
+                        name:'h3R3',
+                        count:'单曲数131',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/ytdZwERCVFd8U1VaWL6wXA==/109951165325450537.jpg?param=200y200',
+                        name:'Justin Bieber',
+                        count:'单曲数1207',
+                    },
+
+                    {
+                        avatar: 'http://p3.music.126.net/kFvcOGKwtNQcskXloPFu4A==/109951163305732134.jpg?param=200y200',
+                        name:'傲七爷',
+                        count:'单曲数109',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/VXY5VYnsUVPExV6ZoQ81zw==/109951163460549658.jpg?param=200y200',
+                        name:'司南',
+                        count:'单曲数120',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/QY_pUbVroy4wW60HMqyS8w==/109951165187976643.jpg?param=200y200',
+                        name:'田馥甄',
+                        count:'单曲数327',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/f2R3-se6DLlcucIusS6mQQ==/109951163610593454.jpg?param=200y200',
+                        name:'花粥',
+                        count:'单曲数287',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/aSIfdr0oLmq-RujG78Oy3w==/109951164481811453.jpg?param=200y200',
+                        name:'等什么君',
+                        count:'单曲数53',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/Q92YwJrk2f2tsK-7B0VIhQ==/6628955605123612.jpg?param=200y200',
+                        name:'陈粒',
+                        count:'单曲数169',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/dh-U2KXHODP5wp8HkApQXg==/109951165317682310.jpg?param=200y200',
+                        name:'卢卢快闭嘴',
+                        count:'单曲数12',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/0Mqbnfd_uGrRe7uYHFPT7w==/109951164784283860.jpg?param=200y200',
+                        name:'火羊瞌睡了',
+                        count:'单曲数23',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/daN7qav1x0nWl-TZRe41dw==/109951163303423969.jpg?param=200y200',
+                        name:'王贰浪',
+                        count:'单曲数119',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/PRa6pWmd4CH0La2xL0kObQ==/109951164922459475.jpg?param=200y200',
+                        name:'周思涵',
+                        count:'单曲数80',
+                    },
+
+                    {
+                        avatar: 'http://p4.music.126.net/ABu20RVf-nzyWRg83ds5rw==/1416170978775000.jpg?param=200y200',
+                        name:'群星',
+                        count:'单曲数52559',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/10SJIPMH-WYPfUv7gD3wWg==/109951163720168310.jpg?param=200y200',
+                        name:'Beyond',
+                        count:'单曲数2771',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/ohub446GfbVtIJ9_H-cjpw==/7719671138847203.jpg?param=200y200',
+                        name:'房东的猫',
+                        count:'单曲数103',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/WSxQCBXPPI-41Qz77fLsOw==/109951162809092287.jpg?param=200y200',
+                        name:'音阙诗听',
+                        count:'单曲数359',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/U9_yVbWosdU9hd2PluL7mQ==/109951164269437732.jpg?param=200y200',
+                        name:'Higher Brothers',
+                        count:'单曲数259',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/reiNPGtXl0vxxMgCXyzRag==/109951165040611052.jpg?param=200y200',
+                        name:'Vicetone',
+                        count:'单曲数402',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/Fp2l7_9h12895Q22lIqzXQ==/109951163438785715.jpg?param=200y200',
+                        name:'宝宝巴士',
+                        count:'单曲数12',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/0Mqbnfd_uGrRe7uYHFPT7w==/109951164784283860.jpg?param=200y200',
+                        name:'火羊瞌睡了',
+                        count:'单曲数1100',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/OMDObi0VPa5V_IY_qqCwdA==/109951165095724398.jpg?param=200y200',
+                        name:'BLACKPINK',
+                        count:'单曲数154',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/7BUW9dnqOMF1dn3ioKJOMg==/109951162820707114.jpg?param=200y200',
+                        name:'Fine乐团',
+                        count:'单曲数78',
+                    },
+
+                ],
+                // 男歌手
+                userlist1: [
+                    {
+                        avatar: 'http://p3.music.126.net/ZXX_c7YiEcNp5HVQWa-y6A==/109951164528322889.jpg?param=200y200',
+                        name:'毛不易',
+                        count:'单曲数121',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/nfgZTD8SBvIlnLuGEYWYDg==/109951165182866347.jpg?param=200y200',
+                        name:'林俊杰',
+                        count:'单曲数605',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/ltoFA2DfaCPOsAiXnDns2Q==/109951164681625927.jpg?param=200y200',
+                        name:'是你的垚',
+                        count:'单曲数35',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/eiazGAbIGMBF-Q9lInm5xw==/109951164158509628.jpg?param=200y200',
+                        name:'华晨宇',
+                        count:'单曲数218',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/ATZ8-mOxophKXrLC0iXMZw==/109951163536269820.jpg?param=200y200',
+                        name:'许嵩',
+                        count:'单曲数238',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/e1V73y8t0G-mJMLJ8FK6dw==/109951163511969173.jpg?param=200y200',
+                        name:'汪苏泷',
+                        count:'单曲数417',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/vq6ND24GpdIWorqiWqz2jg==/109951165048009270.jpg?param=200y200',
+                        name:'周深',
+                        count:'单曲数320',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/PFVNR3tU9DCiIY71NdUDcQ==/109951165334518246.jpg?param=200y200',
+                        name:'张杰',
+                        count:'单曲数623',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/_egjY8qgSCwn5s4ZgGu9KA==/109951163427531646.jpg?param=200y200',
+                        name:'h3R3',
+                        count:'单曲数131',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/ytdZwERCVFd8U1VaWL6wXA==/109951165325450537.jpg?param=200y200',
+                        name:'Justin Bieber',
+                        count:'单曲数1207',
+                    },
+
+
+                ],
+                // 女歌手
+                userlist2:[
+                    {
+                        avatar: 'http://p3.music.126.net/kFvcOGKwtNQcskXloPFu4A==/109951163305732134.jpg?param=200y200',
+                        name:'傲七爷',
+                        count:'单曲数109',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/VXY5VYnsUVPExV6ZoQ81zw==/109951163460549658.jpg?param=200y200',
+                        name:'司南',
+                        count:'单曲数120',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/QY_pUbVroy4wW60HMqyS8w==/109951165187976643.jpg?param=200y200',
+                        name:'田馥甄',
+                        count:'单曲数327',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/f2R3-se6DLlcucIusS6mQQ==/109951163610593454.jpg?param=200y200',
+                        name:'花粥',
+                        count:'单曲数287',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/aSIfdr0oLmq-RujG78Oy3w==/109951164481811453.jpg?param=200y200',
+                        name:'等什么君',
+                        count:'单曲数53',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/Q92YwJrk2f2tsK-7B0VIhQ==/6628955605123612.jpg?param=200y200',
+                        name:'陈粒',
+                        count:'单曲数169',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/dh-U2KXHODP5wp8HkApQXg==/109951165317682310.jpg?param=200y200',
+                        name:'卢卢快闭嘴',
+                        count:'单曲数12',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/0Mqbnfd_uGrRe7uYHFPT7w==/109951164784283860.jpg?param=200y200',
+                        name:'火羊瞌睡了',
+                        count:'单曲数23',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/daN7qav1x0nWl-TZRe41dw==/109951163303423969.jpg?param=200y200',
+                        name:'王贰浪',
+                        count:'单曲数119',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/PRa6pWmd4CH0La2xL0kObQ==/109951164922459475.jpg?param=200y200',
+                        name:'周思涵',
+                        count:'单曲数80',
+                    },
+
+                ],
+                // 乐队
+                userlist3:[
+                    {
+                        avatar: 'http://p4.music.126.net/ABu20RVf-nzyWRg83ds5rw==/1416170978775000.jpg?param=200y200',
+                        name:'群星',
+                        count:'单曲数52559',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/10SJIPMH-WYPfUv7gD3wWg==/109951163720168310.jpg?param=200y200',
+                        name:'Beyond',
+                        count:'单曲数2771',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/ohub446GfbVtIJ9_H-cjpw==/7719671138847203.jpg?param=200y200',
+                        name:'房东的猫',
+                        count:'单曲数103',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/WSxQCBXPPI-41Qz77fLsOw==/109951162809092287.jpg?param=200y200',
+                        name:'音阙诗听',
+                        count:'单曲数359',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/U9_yVbWosdU9hd2PluL7mQ==/109951164269437732.jpg?param=200y200',
+                        name:'Higher Brothers',
+                        count:'单曲数259',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/reiNPGtXl0vxxMgCXyzRag==/109951165040611052.jpg?param=200y200',
+                        name:'Vicetone',
+                        count:'单曲数402',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/Fp2l7_9h12895Q22lIqzXQ==/109951163438785715.jpg?param=200y200',
+                        name:'宝宝巴士',
+                        count:'单曲数12',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/0Mqbnfd_uGrRe7uYHFPT7w==/109951164784283860.jpg?param=200y200',
+                        name:'火羊瞌睡了',
+                        count:'单曲数1100',
+                    },
+                    {
+                        avatar: 'http://p3.music.126.net/OMDObi0VPa5V_IY_qqCwdA==/109951165095724398.jpg?param=200y200',
+                        name:'BLACKPINK',
+                        count:'单曲数154',
+                    },
+                    {
+                        avatar: 'http://p4.music.126.net/7BUW9dnqOMF1dn3ioKJOMg==/109951162820707114.jpg?param=200y200',
+                        name:'Fine乐团',
+                        count:'单曲数78',
+                    },
+
+                ]
+            }
+        },
+
+    })
+
+</script>
+<script>
     var ulObj=$("box");
     var list=ulObj.getElementsByTagName("li");
     console.log(list);
