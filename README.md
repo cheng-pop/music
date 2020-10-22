@@ -3,7 +3,7 @@
 首页<br/>
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/shouye.png)
 歌手栏<br/>
-![Image text](https://github.com/cheng-pop/music/blob/master/images/singer.png)
+![Image text](https://github.com/cheng-pop/music/blob/master/images/singer1.png)
 歌单栏<br/>
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/song.png)
 ![Image text](https://github.com/cheng-pop/music/blob/master/images/song-list.png)
