@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/song-list.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.js"></script>
+   
     
 </head>
 <body>
@@ -63,201 +65,36 @@
                                     <th  class="th-duration">播放</th>
                                 </tr>
                             </thead>
-                            <tbody id="tbody">
-                                <tr class="">
+                            <tbody id="tbody" v-for="(user,index) in userlist":key="index" >
+                                <tr class="" >
                                     <td >
                                         <div  class="index-container flex-center">
-                                            <span  class="num">01</span>
+                                            <span  class="num">{{user.num}}</span>
                                         </div>
                                     </td>
                                     <td >
                                         <div class="name-container">
                                             <div  class="avatar">
                                                 <div class="el-image">
-                                                    <img src="https://p2.music.126.net/coYmm-YQc0S_o4NjYgL0Ag==/109951164498906858.jpg?param=100y100" class="el-image__inner">
+                                                    <img :src="user.avatar" class="el-image__inner">
                                                 </div>
                                             </div>
-                                            <p  title="月半弯" class="name ellipsis">月半弯</p>
+                                            <p  class="name ellipsis">{{user.title}}</p>
                                         </div>
                                     </td>
                                     <td >
                                         <div  class="artist-container">
-                                            <p  title="黄绮珊" class="author ellipsis"> 黄绮珊 </p>
+                                            <p  class="author ellipsis"> {{user.artist}} </p>
                                         </div>
                                     </td>
                                     <td >
                                         <div  class="album-container">
-                                            <p title="出走" class="ellipsis">出走</p>
+                                            <p   class="ellipsis">{{user.album}}</p>
                                         </div>
                                     </td>
                                     <td>
                                         <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=1404755735.mp3 " controls ></audio>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="">
-                                    <td >
-                                        <div  class="index-container flex-center">
-                                            <span  class="num">02</span>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div class="name-container">
-                                            <div  class="avatar">
-                                                <div class="el-image">
-                                                    <img src="https://p2.music.126.net/9CQebRj73mD_x6aZmma2lw==/18434411951556636.jpg?param=100y100" class="el-image__inner">
-                                                </div>
-                                            </div>
-                                            <p  title="心中的日月(Live)" class="name ellipsis">心中的日月(Live)</p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="artist-container">
-                                            <p  title="王力宏" class="author ellipsis"> 王力宏 </p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="album-container">
-                                            <p title=" 世界巡回演唱会影音全纪" class="ellipsis">  世界巡回演唱会影音全纪 </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=25642252.mp3 " controls ></audio>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="">
-                                    <td >
-                                        <div  class="index-container flex-center">
-                                            <span  class="num">03</span>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div class="name-container">
-                                            <div  class="avatar">
-                                                <div class="el-image">
-                                                    <img src="https://p2.music.126.net/-VhCe_b8mnpJ_sL6X4mwWg==/18447606091094611.jpg?param=100y100" class="el-image__inner">
-                                                </div>
-                                            </div>
-                                            <p  title="黑色月亮" class="name ellipsis">黑色月亮</p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="artist-container">
-                                            <p  title=" 杨丞琳 " class="author ellipsis">  杨丞琳  </p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="album-container">
-                                            <p  title="杨丞琳 再见 青春 极精选" class="ellipsis"> 杨丞琳 再见 青春 极精选 </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=523008532.mp3" controls ></audio>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="">
-                                    <td >
-                                        <div  class="index-container flex-center">
-                                            <span  class="num">04</span>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div class="name-container">
-                                            <div  class="avatar">
-                                                <div class="el-image">
-                                                    <img src="https://p2.music.126.net/9FEbeiSO3v8C6BokHbDwbw==/908196604543196.jpg?param=100y100" class="el-image__inner">
-                                                </div>
-                                            </div>
-                                            <p  title="月半弯" class="name ellipsis">月半弯</p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="artist-container">
-                                            <p  title=" 陈坤 " class="author ellipsis">  陈坤  </p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="album-container">
-                                            <p  title="渗透" class="ellipsis"> 渗透 </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=68099.mp3 " controls ></audio>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="">
-                                    <td >
-                                        <div  class="index-container flex-center">
-                                            <span  class="num">05</span>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div class="name-container">
-                                            <div  class="avatar">
-                                                <div class="el-image">
-                                                    <img src="https://p2.music.126.net/43pFctEXWPuCJm9QH5c2DA==/18741175697447512.jpg?param=100y100" class="el-image__inner">
-                                                </div>
-                                            </div>
-                                            <p  title="残酷月光" class="name ellipsis">残酷月光</p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="artist-container">
-                                            <p  title="  林宥嘉  " class="author ellipsis">   林宥嘉   </p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="album-container">
-                                            <p  title="神秘嘉宾" class="ellipsis"> 神秘嘉宾 </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=108557.mp3" controls ></audio>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="">
-                                    <td >
-                                        <div  class="index-container flex-center">
-                                            <span  class="num">06</span>   
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div class="name-container">
-                                            <div  class="avatar">
-                                                <div class="el-image">
-                                                    <img src="https://p2.music.126.net/o_OjL_NZNoeog9fIjBXAyw==/18782957139233959.jpg?param=100y100" class="el-image__inner">
-                                                </div>
-                                            </div>
-                                            <p  title="月球上的人" class="name ellipsis">月球上的人</p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="artist-container">
-                                            <p  title="  陈奕迅  " class="author ellipsis">   陈奕迅  </p>
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div  class="album-container">
-                                            <p  title="认了吧" class="ellipsis"> 认了吧</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <audio id="audio" src="https://music.163.com/song/media/outer/url?id=65549.mp3 " controls ></audio>
+                                            <audio id="audio" :src="user.audio  " controls ></audio>
                                         </div>
                                     </td>
                                 </tr>
@@ -286,9 +123,67 @@
 </div>
 <script src="../js/common.js"></script>
 <script src="../js/song-list.js"></script>
-
+<!-- 存储歌曲信息 -->
 <script>
+    let vm=new Vue({
+        el:'#app',
+        data() {
+            return {
+                user:{   num:'01',
+                        avatar: 'https://p2.music.126.net/coYmm-YQc0S_o4NjYgL0Ag==/109951164498906858.jpg?param=100y100',
+                        title:'月半弯',
+                        artist:'黄绮珊',
+                        album:'出走',
+                        audio:'https://music.163.com/song/media/outer/url?id=1404755735.mp3',
+                },
+                userlist: [
+                    {   num:'01',
+                        avatar: 'https://p2.music.126.net/coYmm-YQc0S_o4NjYgL0Ag==/109951164498906858.jpg?param=100y100',
+                        title:'月半弯',
+                        artist:'黄绮珊',
+                        album:'出走',
+                        audio:'https://music.163.com/song/media/outer/url?id=1404755735.mp3',
+                    },
+                    {   num:'02',
+                        avatar: 'https://p2.music.126.net/9CQebRj73mD_x6aZmma2lw==/18434411951556636.jpg?param=100y100',
+                        title:'心中的日月(Live)',
+                        artist:'王力宏',
+                        album:'世界巡回演唱会影音全纪',
+                        audio:'https://music.163.com/song/media/outer/url?id=25642252.mp3',
+                    },
+                    {   num:'03',
+                        avatar: 'https://p2.music.126.net/-VhCe_b8mnpJ_sL6X4mwWg==/18447606091094611.jpg?param=100y100',
+                        title:'黑色月亮',
+                        artist:'杨丞琳',
+                        album:'杨丞琳 再见 青春 极精选',
+                        audio:'https://music.163.com/song/media/outer/url?id=523008532.mp3',
+                    },
+                    {   num:'04',
+                        avatar: 'https://p2.music.126.net/9FEbeiSO3v8C6BokHbDwbw==/908196604543196.jpg?param=100y100',
+                        title:'月半弯',
+                        artist:'陈坤',
+                        album:'渗透',
+                        audio:'https://music.163.com/song/media/outer/url?id=68099.mp3',
+                    },
+                    {   num:'05',
+                        avatar: 'https://p2.music.126.net/43pFctEXWPuCJm9QH5c2DA==/18741175697447512.jpg?param=100y100',
+                        title:'残酷月光',
+                        artist:' 林宥嘉 ',
+                        album:'神秘嘉宾',
+                        audio:'https://music.163.com/song/media/outer/url?id=108557.mp3',
+                    },
+                    {   num:'06',
+                        avatar: 'https://p2.music.126.net/o_OjL_NZNoeog9fIjBXAyw==/18782957139233959.jpg?param=100y100',
+                        title:'月球上的人',
+                        artist:'陈奕迅',
+                        album:'认了吧',
+                        audio:'https://music.163.com/song/media/outer/url?id=65549.mp3',
+                    },
+                ],
+            }
+        },
 
+    })
 
 </script>
 
