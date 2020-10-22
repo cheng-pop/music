@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>我的音乐</title>
     <link rel="stylesheet" href="../css/rankingList.css">
     <link rel="stylesheet" href="../css/common.css">
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.js"></script>
+    <script src="../js/common.js"></script>
 </head>
 <body>
     <div id="app">
@@ -31,62 +33,24 @@
                         </h2>
                             <div class="list">
                              <!-- ----- -->
-                                <div class="item six">
-                                    <a href="rank-detail.html">
-                                        <div class="cover">
-                                            <div class="image">
-                                                <div class="el-image">
-                                                    <img src="https://p1.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=300y300" alt="" class="el-image-inner">
-                                                </div> 
-                                            </div>
-                                            <div class="count">
-                                                <i  class="arrow"></i>
-                                                <span>35万</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two">  音乐飙升榜 </h2>
-                                </div>
-                            </div>
-                            <!-- ------ -->
-                            <div class="item six">
+                             <div class="item six" v-for="(user,index) in userlist":key="index">
                                 <a href="rank-detail.html">
                                     <div class="cover">
                                         <div class="image">
                                             <div class="el-image">
-                                                <img src="https://p1.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=300y300" alt="" class="el-image-inner">
+                                                <img :src="user.avatar" alt="" class="el-image-inner">
                                             </div> 
                                         </div>
                                         <div class="count">
                                             <i  class="arrow"></i>
-                                            <span>19万</span>
+                                            <span>{{user.count}}</span>
                                         </div>
                                     </div>
                                 </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two">  音乐新歌榜 </h2>
-                                </div>
+                            <div  class="info">
+                                <h2  class="name ellipsis-two">  {{user.name}} </h2>
                             </div>
-                            <!-- ----- -->
-                            <div class="item six">
-                                <a href="rank-detail.html">
-                                    <div class="cover">
-                                        <div class="image">
-                                            <div class="el-image">
-                                                <img src="https://p2.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg?param=300y300" alt="" class="el-image-inner">
-                                            </div> 
-                                        </div>
-                                        <div class="count">
-                                            <i  class="arrow"></i>
-                                            <span>75万</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two"> 音乐热歌榜 </h2>
-                                </div>
-                            </div>
+                        </div>
                         </div>
                     </div>
 
@@ -97,79 +61,22 @@
                         </h2>
                         <div class="list">
                             <!-- ----- -->
-                            <div class="item six">
+                            <div class="item six" v-for="(user,index) in userlist1":key="index">
                                 <a href="rank-detail.html">
                                     <div class="cover">
                                         <div class="image">
                                             <div class="el-image">
-                                                <img src="https://p1.music.126.net/c0iThrYPpnFVgFvU6JCVXQ==/109951164091703579.jpg?param=300y300" alt="" class="el-image-inner">
-                                            </div> 
+                                                <img :src="user.avatar" alt="" class="el-image-inner">
+                                            </div>
                                         </div>
                                         <div class="count">
                                             <i  class="arrow"></i>
-                                            <span>5207万</span>
+                                            <span>{{user.count}}</span>
                                         </div>
                                     </div>
                                 </a>
                                 <div  class="info">
-                                    <h2  class="name ellipsis-two">   欧美热歌榜  </h2>
-                                </div>
-                            </div>
-                            <!-- ------ -->
-                            <div class="item six">
-                                <a href="rank-detail.html">
-                                    <div class="cover">
-                                        <div class="image">
-                                            <div class="el-image">
-                                                <img src="https://p1.music.126.net/gA3BalzlKrHZlHJqcK0iWw==/109951165165699702.jpg?param=300y300" alt="" class="el-image-inner">
-                                            </div> 
-                                        </div>
-                                        <div class="count">
-                                            <i  class="arrow"></i>
-                                            <span>408万</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two">   日语榜  </h2>
-                                </div>
-                            </div>
-                            <!-- ----- -->
-                            <div class="item six">
-                                <a href="rank-detail.html">
-                                    <div class="cover">
-                                        <div class="image">
-                                            <div class="el-image">
-                                                <img src="https://p1.music.126.net/EBRqPmY8k8qyVHyF8AyjdQ==/18641120139148117.jpg?param=300y300" alt="" class="el-image-inner">
-                                            </div> 
-                                        </div>
-                                        <div class="count">
-                                            <i  class="arrow"></i>
-                                            <span>4亿</span>
-                                        </div>
-                                    </div>
-                                 </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two">   美国Billboard周榜  </h2>
-                                </div>
-                            </div>
-                            <!-- ----- -->
-                            <div class="item six">
-                                <a href="rank-detail.html">
-                                    <div class="cover">
-                                        <div class="image">
-                                            <div class="el-image">
-                                                <img src="https://p2.music.126.net/vs-cMh49e6qPEorHuhU07A==/18737877162497499.jpg?param=300y300" alt="" class="el-image-inner">
-                                            </div> 
-                                        </div>
-                                        <div class="count">
-                                            <i  class="arrow"></i>
-                                            <span>5797万</span>
-                                        </div>
-                                    </div>
-                                 </a>
-                                <div  class="info">
-                                    <h2  class="name ellipsis-two">  韩语榜  </h2>
+                                    <h2  class="name ellipsis-two">  {{user.name}} </h2>
                                 </div>
                             </div>
                             
@@ -182,98 +89,22 @@
                     </h2>
                     <div class="list">
                         <!-- ----- -->
-                        <div class="item six">
+                        <div class="item six" v-for="(user,index) in userlist2":key="index">
                             <a href="rank-detail.html">
                                 <div class="cover">
                                     <div class="image">
                                         <div class="el-image">
-                                            <img src="https://p1.music.126.net/oUxnXXvM33OUHxxukYnUjQ==/109951164174523461.jpg?param=300y300" alt="" class="el-image-inner">
-                                        </div> 
+                                            <img :src="user.avatar" alt="" class="el-image-inner">
+                                        </div>
                                     </div>
                                     <div class="count">
                                         <i  class="arrow"></i>
-                                        <span>7亿</span>
+                                        <span>{{user.count}}</span>
                                     </div>
                                 </div>
                             </a>
                             <div  class="info">
-                                <h2  class="name ellipsis-two">  抖音排行榜 </h2>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                        <div class="item six">
-                            <a href="rank-detail.html">
-                                <div class="cover">
-                                    <div class="image">
-                                        <div class="el-image">
-                                            <img src="https://p2.music.126.net/0BcoQQ36qj56JnGKzY8QbQ==/109951165165696810.jpg?param=300y300" alt="" class="el-image-inner">
-                                        </div> 
-                                    </div>
-                                    <div class="count">
-                                        <i  class="arrow"></i>
-                                        <span>1588万</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div  class="info">
-                                <h2  class="name ellipsis-two">  古风榜 </h2>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                        <div class="item six">
-                            <a href="rank-detail.html">
-                                <div class="cover">
-                                    <div class="image">
-                                        <div class="el-image">
-                                            <img src="https://p1.music.126.net/5tgOCD4jiPKBGt7znJl-2g==/18822539557941307.jpg?param=300y300" alt="" class="el-image-inner">
-                                        </div> 
-                                    </div>
-                                    <div class="count">
-                                        <i  class="arrow"></i>
-                                        <span>2亿</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div  class="info">
-                                <h2  class="name ellipsis-two">  电音榜 </h2>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                        <div class="item six">
-                            <a href="rank-detail.html">
-                                <div class="cover">
-                                    <div class="image">
-                                        <div class="el-image">
-                                            <img src="https://p1.music.126.net/H4Y7jxd_zwygcAmPMfwJnQ==/19174383276805159.jpg?param=300y300" alt="" class="el-image-inner">
-                                        </div> 
-                                    </div>
-                                    <div class="count">
-                                        <i  class="arrow"></i>
-                                        <span>5502万</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div  class="info">
-                                <h2  class="name ellipsis-two">  KTV榜 </h2>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                        <div class="item six">
-                            <a href="rank-detail.html">
-                                <div class="cover">
-                                    <div class="image">
-                                        <div class="el-image">
-                                            <img src="https://p1.music.126.net/vkkfXP8VyUHJKCJWJdKs-A==/109951165286069895.jpg?param=300y300" alt="" class="el-image-inner">
-                                        </div> 
-                                    </div>
-                                    <div class="count">
-                                        <i  class="arrow"></i>
-                                        <span>558万</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div  class="info">
-                                <h2  class="name ellipsis-two">  新说唱热歌榜 </h2>
+                                <h2  class="name ellipsis-two">  {{user.name}} </h2>
                             </div>
                         </div>
                     </div>
@@ -295,7 +126,91 @@
         </div>
     </div> 
 
-<script src="../js/common.js"></script>
+    <script>
+        let vm=new Vue({
+            el:'#app',
+            data() {
+                return {
+                    user:{
+                        avatar: 'https://p1.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=300y300',
+                        count:'35万',
+                        name:'音乐飙升榜',
+                    },
+                    // 音乐特色榜
+                    userlist: [
+                        {
+                            avatar: 'https://p1.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=300y300',
+                            count:'35万',
+                            name:'音乐飙升榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=300y300',
+                            count:'19万',
+                            name:'音乐新歌榜',
+                        },
+                        {
+                            avatar: 'https://p2.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg?param=300y300',
+                            count:'75万',
+                            name:' 音乐热歌榜',
+                        },
+                    ],
+                    // 地区榜
+                    userlist1: [
+                        {
+                            avatar: 'https://p1.music.126.net/c0iThrYPpnFVgFvU6JCVXQ==/109951164091703579.jpg?param=300y300',
+                            count:'5207万',
+                            name:' 欧美热歌榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/gA3BalzlKrHZlHJqcK0iWw==/109951165165699702.jpg?param=300y300',
+                            count:'408万',
+                            name:'日语榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/EBRqPmY8k8qyVHyF8AyjdQ==/18641120139148117.jpg?param=300y300',
+                            count:'4亿',
+                            name:'美国Billboard周榜',
+                        },
+                        {
+                            avatar: 'https://p2.music.126.net/vs-cMh49e6qPEorHuhU07A==/18737877162497499.jpg?param=300y300',
+                            count:'5797万',
+                            name:'  韩语榜',
+                        },
+                    ],
+                    // 全球媒体榜
+                    userlist2: [
+                        {
+                            avatar: 'https://p1.music.126.net/oUxnXXvM33OUHxxukYnUjQ==/109951164174523461.jpg?param=300y300',
+                            count:'7亿',
+                            name:'抖音排行榜',
+                        },
+                        {
+                            avatar: 'https://p2.music.126.net/0BcoQQ36qj56JnGKzY8QbQ==/109951165165696810.jpg?param=300y300',
+                            count:'1588万',
+                            name:'古风榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/5tgOCD4jiPKBGt7znJl-2g==/18822539557941307.jpg?param=300y300',
+                            count:'2亿',
+                            name:'电音榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/H4Y7jxd_zwygcAmPMfwJnQ==/19174383276805159.jpg?param=300y300',
+                            count:'5502万',
+                            name:'KTV榜',
+                        },
+                        {
+                            avatar: 'https://p1.music.126.net/vkkfXP8VyUHJKCJWJdKs-A==/109951165286069895.jpg?param=300y300',
+                            count:'558万',
+                            name:' 新说唱热歌榜',
+                        },
+                    ],
+                }
+            },
+
+        })
+
+    </script>
 
 </body>
 </html>
